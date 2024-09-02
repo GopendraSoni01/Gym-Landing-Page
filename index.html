@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse Fitness Landing Page</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <body>
+    <!-- Menu -->
+    <div class="menu">
+      <div class="container flex">
+        <!-- Mobile Button -->
+        <div class="mobile-btn">
+          <ion-icon name="grid"></ion-icon>
+        </div>
+        <div class="logo">
+          <!-- Updated logo -->
+          <img
+            src="logo_gym-removebg-preview.png"
+            alt="PGC-GYM Logo"
+          />
+        </div>
+
+        <ul class="nav">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#why-us">Features</a></li>
+          <li class="nav-item"><a href="#explore">Explore</a></li>
+         
+          <li class="nav-item"><a href="#discount">Register</a></li>
+          
+        </ul>
+
+        <a href="register.html" class="btn">Register</a>
+      </div>
+    </div>
+    <!-- End Menu -->
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container flex">
+        <div class="text">
+          <h1 class="mb">
+            Complete Daily <br />
+            <span>Workout</span> At Home
+          </h1>
+
+          <p class="mb">
+            Join us to achieve your fitness goals with personalized workout plans and expert guidance from certified trainers, all from the comfort of your home.
+          </p>
+
+          <a href="#" class="btn mt">Get Started Now</a>
+        </div>
+
+        <div class="visual">
+          <img
+            src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/banner-img.png"
+            alt="Workout Banner"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Why Us -->
+    <div class="section" id="why-us">
+      <div class="container flex">
+        <div class="text">
+          <h2 class="primary mb">Why Choose Us?</h2>
+          <h3 class="secondary mb">Consultation with Experts</h3>
+          <p class="tertiary">
+            Get personalized fitness plans and nutrition advice from our team of certified experts to maximize your results.
+          </p>
+
+          <h3 class="secondary mb">Flexible Workout Schedules</h3>
+          <p class="tertiary">
+            Our programs are designed to fit into your busy lifestyle, with on-demand workout sessions that you can access anytime, anywhere.
+          </p>
+        </div>
+        <div class="visual">
+          <img
+            src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/why-us.png"
+            alt="Why Choose Us"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- End Why Us -->
+
+    <!-- Explore -->
+    <div class="section" id="explore">
+      <div class="container flex">
+        <div class="visual">
+          <img
+            src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/explore.jpg"
+            alt="Explore Our Studio"
+          />
+        </div>
+        <div class="text">
+          <h2 class="primary mb">
+            Explore Our Fitness <br />
+            Studio
+          </h2>
+          <p class="tertiary mb">
+            Discover our state-of-the-art fitness studio, equipped with the latest gym equipment and facilities to enhance your workout experience.
+          </p>
+
+          <a href="#" class="btn mt">Get Started Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Explore -->
+
+    <!-- Trainer -->
+    <div class="section" id="trainer">
+      <h2 class="primary mb">Our Professional Trainers</h2>
+      <div class="container flex">
+        <div class="trainer">
+          <img
+            src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/trainer1.jpg"
+            alt="Trainer Alan Smith"
+          />
+          <h3 class="secondary mb">Alan Smith</h3>
+          <p class="tertiary mb">
+            Alan is a certified fitness trainer specializing in strength training and cardio workouts. He brings over 10 years of experience to help you achieve your fitness goals.
+          </p>
+
+          <a href="#" class="btn-2">
+            <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+          </a>
+        </div>
+
+        <div class="trainer">
+          <img
+            src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/trainer2.jpg"
+            alt="Trainer Lisa Johnson"
+          />
+          <h3 class="secondary mb">Lisa Johnson</h3>
+          <p class="tertiary mb">
+            Lisa is a passionate yoga instructor and personal trainer, known for her holistic approach to fitness that balances the mind and body.
+          </p>
+
+          <a href="#" class="btn-2">
+            <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+          </a>
+        </div>
+
+        <div class="trainer">
+          <img
+            src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/trainer3.jpg"
+            alt="Trainer Mark Lee"
+          />
+          <h3 class="secondary mb">Mark Lee</h3>
+          <p class="tertiary mb">
+            With a background in sports science, Mark offers dynamic workout sessions focusing on agility and functional fitness.
+          </p>
+
+          <a href="#" class="btn-2">
+            <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End Trainer -->
+
+    <!-- Testimonial -->
+    <div class="section" id="testimonial">
+      <div class="container flex">
+        <div class="text">
+          <h2 class="primary">
+            Hear from Our Satisfied <br />
+            Clients
+          </h2>
+
+          <br />
+          <br />
+          <br />
+
+          <div class="client">
+            <img
+              src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/client1.jpg"
+              alt="Client Testimonial"
+            />
+            <h2 class="secondary">Excellent Training</h2>
+            <p class="tertiary">
+              "The trainers at PGC-GYM are fantastic! I've seen amazing results since joining. The workout plans are challenging but achievable, and the staff is incredibly supportive."
+            </p>
+          </div>
+        </div>
+        <div class="visual">
+          <img
+            src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/testimonial.png"
+            alt="Testimonial Visual"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- End Testimonial -->
+
+    <!-- Discount -->
+    <div class="section" id="discount">
+      <div class="container flex">
+        <div class="visual">
+          <img
+            src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/discount.png"
+            alt="Discount Offer"
+          />
+        </div>
+        <div class="text">
+          <h2 class="primary mb">
+            Summer Fitness Special: Pay Now and Get 25% Off
+          </h2>
+
+          <p class="tertiary mb">
+            Sign up for our summer fitness classes today and enjoy a 25% discount. Limited time offer, so act fast!
+          </p>
+
+          <a href="#" class="btn bt">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Discount -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container flex">
+        <p class="tertiary">
+          &copy; 2024 Pulse Fitness. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    
+    <!-- Watch Tutorial Button -->
+    <a href="" class="youtube" target="__blank">
+      <p>Watch Tutorial 🔥</p>
+    </a>
+    
+    <!-- End Footer -->
+
+    <!-- Ion Icons Js -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | PGC-GYM</title>
+    
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap">
+
+    <style>
+        /* Basic Reset and Font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #151f28;
+        }
+
+        .register-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+
+        .payment-button {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            height: 70px;
+            max-width: 140px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .payment-button img {
+            max-width: 40px;
+            margin-right: 10px;
+        }
+
+        .payment-button:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .payment-options {
+            display: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .payment-options.active {
+            display: block;
+        }
+
+        .payment-section {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .payment-section.active {
+            display: block;
+        }
+
+        button.register-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #000000;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button.register-btn:hover {
+            background-color: #333333;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 12px;
+            text-align: left;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Square Animation Styles */
+        .square {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .square i {
+            position: absolute;
+            inset: 0;
+            border: 2px solid #fff;
+            transition: 0.5s;
+        }
+
+        .square i:nth-child(1) {
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            animation: animate 6s linear infinite;
+        }
+
+        .square i:nth-child(2) {
+            border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+            animation: animate 4s linear infinite;
+        }
+
+        .square i:nth-child(3) {
+            border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+            animation: animate2 10s linear infinite;
+        }
+
+        .square:hover i {
+            border: 6px solid var(--clr);
+            filter: drop-shadow(0 0 20px var(--clr));
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .register-container {
+                padding: 20px;
+            }
+
+            input, .payment-button, button.register-btn {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .payment-button {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <label for="paymentMethod">Select Payment Method:</label>
+            <div class="button-group">
+                <button type="button" class="payment-button" onclick="showPaymentOptions('upi')">
+                    <img src="UPI-Black.png" alt="UPI"> UPI
+                </button>
+                <button type="button" class="payment-button" onclick="showPaymentOptions('phonepe')">
+                    <img src="PhonePe-Logo.wine.svg" alt="PhonePe"> PhonePe
+                </button>
+                <button type="button" class="payment-button" onclick="showPaymentOptions('credit')">
+                    <img src="—Pngtree—realistic virtual credit cards_5358211.png" alt="Credit Card"> Credit Card
+                </button>
+                <button type="button" class="payment-button" onclick="showPaymentOptions('debit')">
+                    <img src="—Pngtree—debit card bank card_5907039.png" alt="Debit Card"> Debit Card
+                </button>
+            </div>
+
+            <div id="paymentOptions" class="payment-options">
+                <div id="upi" class="payment-section">
+                    <h3>UPI Payment</h3>
+                    <p>Instructions for UPI payment...</p>
+                </div>
+                <div id="phonepe" class="payment-section">
+                    <h3>PhonePe Payment</h3>
+                    <p>Instructions for PhonePe payment...</p>
+                </div>
+                <div id="credit" class="payment-section">
+                    <h3>Credit Card Payment</h3>
+                    <p>Instructions for Credit Card payment...</p>
+                </div>
+                <div id="debit" class="payment-section">
+                    <h3>Debit Card Payment</h3>
+                    <p>Instructions for Debit Card payment...</p>
+                </div>
+            </div>
+
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function showPaymentOptions(selected) {
+            const sections = document.querySelectorAll('.payment-section');
+            sections.forEach(section => {
+                if (section.id === selected) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+
+            document.getElementById('paymentOptions').classList.add('active');
+        }
+
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Handle form submission
+        });
+    </script>
+</body>
+</html>
